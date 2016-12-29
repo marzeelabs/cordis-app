@@ -1,0 +1,14 @@
+{
+    "data": {
+        "project": [
+            {
+                "title": "CRG project",
+                "coordinatorCountry": "ES"
+            },
+            {
+                "title": "VUB Project",
+                "coordinatorCountry": "BE"
+            }
+        ]
+    }
+}
