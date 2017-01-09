@@ -23,7 +23,7 @@ update msg model =
 
 fetch : Cmd Msg
 fetch =
-    Http.get decodeData App.Model.headlessServer
+    Http.post decodeData App.Model.headlessServer (Http.string """{ "query": "{ project { rcn, title } }" }""")
         |> RemoteData.asCmd
         |> Cmd.map FetchResponse
 

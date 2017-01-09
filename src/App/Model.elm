@@ -14,5 +14,6 @@ emptyModel =
 
 headlessServer : String
 headlessServer =
-    "http://localhost:4000/db"
+    --"http://localhost:4000/db"
+    "https://5e5qfaxb1c.execute-api.eu-west-1.amazonaws.com/dev/graphql"
 
