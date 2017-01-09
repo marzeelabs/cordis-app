@@ -30,12 +30,16 @@ viewProject project =
         coordinatorCountry = case project.coordinatorCountry of
             Just coordinatorCountry' -> coordinatorCountry'
             Nothing -> "N/A"
+        acronym = case project.acronym of
+            Just acronym' -> acronym'
+            Nothing -> "N/A"
     in
         case project.title of
             Just title ->
                 div [ class "item" ]
                     [ div [ class "header" ] [ text title ]
-                    , div [] [ text ("Country: " ++ coordinatorCountry) ]
+                    , div [] [ text ("Acronym: " ++ acronym) ]
+                    , div [] [ text ("Country: " ++ coordinatorCountry) ]                    
                     ]
             Nothing ->
                 div [] []
