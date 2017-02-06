@@ -9,7 +9,9 @@ import Html.Attributes exposing (..)
 view : App.Model.Model -> Html Msg
 view model =
     div [ ]
-        [ h2 [ class "ui dividing header" ] [ text "Projects" ]
+        [ h2 [ class "ui dividing header" ] [ text "Stats" ]
+        , Project.View.viewProjects model.projects
+        , h2 [ class "ui dividing header" ] [ text "List" ]
         , Project.View.viewProjects model.projects
         ]
 
