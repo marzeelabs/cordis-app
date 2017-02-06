@@ -33,6 +33,9 @@ viewProject project =
         acronym = case project.acronym of
             Just acronym' -> acronym'
             Nothing -> "N/A"
+        funding = case project.ecMaxContribution of
+            Just funding' -> funding'
+            Nothing -> "N/A"
     in
         case project.title of
             Just title ->
@@ -40,6 +43,7 @@ viewProject project =
                     [ div [ class "header" ] [ text title ]
                     , div [] [ text ("Acronym: " ++ acronym) ]
                     , div [] [ text ("Country: " ++ coordinatorCountry) ]                    
+                    , div [] [ text ("Funding: " ++ funding) ]                    
                     ]
             Nothing ->
                 div [] []
